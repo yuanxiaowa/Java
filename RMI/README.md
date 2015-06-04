@@ -11,7 +11,7 @@
 // System.setSecurityManager(new RMISecurityManager());
 ITest test = new TestImpl();
 
-// 如果在命令行启动JRMI服务器 `rmiregistry 1099`，不加上这句
+// 如果在命令行启动JRMI服务器 `rmiregistry 1099`，不加上这句， 1099为默认端口
 LocateRegistry.createRegistry(1099);
 
 // 将TestString与test对象绑定, TestString 或是 rmi://10.0.0.112:1099/TestString 或 //10.0.0.112:1099/TestString
