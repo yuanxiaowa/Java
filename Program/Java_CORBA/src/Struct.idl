@@ -1,0 +1,6 @@
+module Structs{
+	struct StruckType {
+		long field1;
+		string field2;
+	};
+};

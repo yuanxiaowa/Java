@@ -1,0 +1,5 @@
+module Example{
+	interface Modes {
+		long operation(in long inArg, out long outArg, inout long inoutArg);
+	};
+};

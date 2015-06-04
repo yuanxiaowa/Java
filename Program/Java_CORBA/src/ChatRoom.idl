@@ -1,0 +1,18 @@
+module ChatRoom{
+	interface Chater {
+		attribute string chaterName;
+		oneway void strReceived(in string str, in string name);
+	};
+	interface Room {
+		exception room_is_full{
+			string message;
+		};
+		exception invalid_name{
+			string message;
+		};
+		void register(inout Chater aChater) raises(room_is_full, invalid_name);
+		void unregister(inout Chater aChater);
+		oneway void StrReceived(in string name, in string sentence);
+		oneway void shutdown();
+	};
+};
